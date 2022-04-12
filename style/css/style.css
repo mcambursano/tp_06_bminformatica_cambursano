@@ -54,6 +54,35 @@
         color: white;
     }
 
+    .transicion {
+        transition: all 1s;
+    }
+    .transicion:hover {
+        width: 300px;
+        height: 120px;
+        background-color: #5d91f8;
+    }
+    /* Linea de tiempo = KEYFRAME */
+    @keyframes texto {
+        from/* inicio */{
+        transform: translateX(1000px);
+        opacity: 0;
+        }
+    
+        to/* final */{
+        transform: translateX(0);
+        opacity: 1;
+        }
+    }
+    
+    .moverImgNosotros {
+        transition: height 2s ;
+    }
+    .moverImgNosotros:hover {
+        height: 350px;
+    }
+
+
     .imgLogo {
         width: 300px;
     }
@@ -215,7 +244,8 @@
         color: white;
         font-weight: bold; 
         font-size: 3rem;
-
+        animation-name: texto;
+        animation-duration: 4s;
     }
 
     .destacado p {
@@ -224,12 +254,15 @@
         margin: 10px 50px 50px auto;
         width: 30%;
         color: white;
-
+        animation-name: texto;
+        animation-duration: 6s;
     }
+
     .footterPading {
         padding-left: 50px;
         padding-right: 50px;
     }
+
     .mapaFooter{ /* mapa footer */
         width: 30vw;
     }
